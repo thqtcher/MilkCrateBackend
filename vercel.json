@@ -1,0 +1,22 @@
+{
+  "builds": [
+    {
+      "src": "templates/form.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/form",
+      "dest": "templates/form.html"
+    },
+    {
+      "src": "/process",
+      "dest": "api/index.py"
+    }
+  ]
+}
